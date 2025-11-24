@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart Button</title>
+
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="/utility.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Sixtyfour&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="flex-col justify-center">
+    <div class="btn-out">
+        <div id="btn-shutter"></div>
+        <button id="btn-addto-cart">
+            <div class="btn-txt txt1" id="txt1">Add to Cart</div>
+            <div class="btn-txt txt2" id="txt2"><span><img src="/icons/loading.svg" alt="loading icon"
+                        class="invert"></span><span>Loading</span></div>
+            <div class="btn-txt txt3" id="txt3"><span><img src="/icons/check.svg" alt="check mark"
+                        class="invert"></span><span>Done</span></div>
+        </button>
+
+    </div>
+    <script>
+        let button = document.getElementById('btn-addto-cart');
+        button.addEventListener('click', () => {
+            document.getElementById('txt1').style.display = 'none';
+            document.getElementById('txt2').style.display = 'block';
+            setInterval((e) => {
+                document.getElementById('txt2').style.display = 'none';
+                document.getElementById('txt3').style.display = 'block';
+                document.getElementById('btn-shutter').style.display = 'block';
+            }, 3000);
+        })
+    </script>
+</body>
+
+</html>

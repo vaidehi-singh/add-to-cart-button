@@ -1,0 +1,65 @@
+body{
+    font-size: 30px;
+    font-family: "Sixtyfour", sans-serif;
+}
+.btn-out{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.btn-out button{
+    background-color: rgb(53, 6, 193);
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 30px 15px 30px;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    /* animation: all linear 0.2s; */
+}
+#btn-shutter{
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 174px;
+    height: 56px;
+    display: none;
+}
+.btn-out button:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s linear;
+}
+.btn-txt{
+    color: white;
+    font-size: 0.5em;
+}
+.txt1{
+    display: block;
+}
+.txt2{
+    display: none;
+    img{
+        animation: rotate 0.8s ease-in-out infinite;
+        vertical-align: sub;
+        margin: 0 5px 0 -5px;
+    }
+}
+.txt3{
+    display: none;
+    img{
+        vertical-align: sub;
+        margin: 0 9px 0 -8px;
+    }
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
